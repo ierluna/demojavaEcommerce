@@ -1,20 +1,25 @@
 package models;
 
 public class Producto {
-    //descripción  (atributos)
-    String nombre;
-    double precio;
-    int stock;
+    //Descripción  (atributos)
+    private static int  SIGUIENTE_ID =1;
+    private final int id;
+    private String nombre;
+    private double precio;
+    private int stock;
 
-    public  Producto(){}
+    //Constructor
     public  Producto(String nombre, double precio, int stock){
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+        this.id = SIGUIENTE_ID;
+        SIGUIENTE_ID++;
     }
 
-    void reportarProducto(){
-        System.out.println("Nombre del producto: " +nombre+ "Precio: " + precio + "Stock: " + stock);
+
+    public void reportarProducto(){
+        System.out.println("Nombre del producto: " +nombre+ " Precio: " + precio + " Stock: " + stock + " ID: " + id);
     }
 
 
