@@ -1,8 +1,10 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Producto {
     //Descripción  (atributos)
-    private static int  SIGUIENTE_ID =1;
+    private static int SIGUIENTE_ID = 1;
     private final int id;
     private String nombre;
     private double precio;
@@ -17,6 +19,9 @@ public class Producto {
         SIGUIENTE_ID++;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public void reportarProducto(){
         System.out.println("Nombre del producto: " +nombre+ " Precio: " + precio + " Stock: " + stock + " ID: " + id);
