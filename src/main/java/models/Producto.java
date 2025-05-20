@@ -23,9 +23,17 @@ public class Producto {
         return id;
     }
 
-    public void reportarProducto(){
-        System.out.println("Nombre del producto: " +nombre+ " Precio: " + precio + " Stock: " + stock + " ID: " + id);
+    public void reportarProducto() {
+        System.out.printf("Nombre del producto: %s  Precio: %f  Stock: %d  ID: %d", nombre, precio, stock, id  );
     }
 
+    public static void reportarListaDeProductos(ArrayList<Producto> listaProducto){
+        System.out.println("Lista de productos: ");
 
+        for (Producto producto : listaProducto) {
+            System.out.println("Producto numero: " + producto.getId());
+            producto.reportarProducto();
+            System.out.println("\n");
+        }
+    }
 }
