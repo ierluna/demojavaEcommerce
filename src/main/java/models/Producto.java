@@ -11,7 +11,7 @@ public class Producto {
     private int stock;
 
     //Constructor
-    public  Producto(String nombre, double precio, int stock){
+    public Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
