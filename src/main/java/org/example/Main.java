@@ -20,9 +20,23 @@ public class Main {
 
         //Producto.reportarListaDeProductos(listaDeBebidas);
 
-        Producto.buscarPorNombre(listaDeBebidas, "cocaCola");
-        Producto.buscarPorNombre(listaDeBebidas, "cunnington");
+        //Producto.buscarPorNombre(listaDeBebidas, "cocaCola");
+        //Producto.buscarPorNombre(listaDeBebidas, "cunnington");
 
+        //Producto.buscarPorID(listaDeBebidas, 3); //retorna cunnington
+        //Producto.buscarPorID(listaDeBebidas, 4); //retorna no se encontro el producto
 
+ /*       pepsi.actualizarPrecio(-5);
+        pepsi.reportarProducto();
+        pepsi.actualizarPrecio(5.200);
+        pepsi.reportarProducto();
+        pepsi.actualizarStock(-3);
+        pepsi.reportarProducto();
+        pepsi.actualizarStock(3000);
+        pepsi.reportarProducto();
+*/
+
+        Producto.eliminarProductoPorId(listaDeBebidas,3);
+        Producto.eliminarProductoPorId(listaDeBebidas,3);
     }
 }
