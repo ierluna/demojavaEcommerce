@@ -161,7 +161,7 @@ $RECYCLE.BIN/
 *.lnk
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -190,8 +190,8 @@ build/
 .settings
 bin
 build
-target
-dependency-reduced-pom.xml
+target/
+reduced-pom.xml
 *.sublime-*
 /scratch
 .gradle
