@@ -38,10 +38,15 @@ public class Producto {
     public static void reportarListaDeProductos(ArrayList<Producto> listaProducto) {
         System.out.println("Lista de productos: ");
 
-        for (Producto producto : listaProducto) {
-            System.out.println("Producto numero: " + producto.getId());
-            producto.reportarProducto();
-            System.out.println("\n");
+        if(listaProducto.isEmpty()){
+            System.out.println("Todavia no hay ningun producto.");
+        }
+        else {
+            for (Producto producto : listaProducto) {
+                System.out.println("Producto numero: " + producto.getId());
+                producto.reportarProducto();
+                System.out.println("\n");
+            }
         }
     }
 
@@ -51,7 +56,6 @@ public class Producto {
         } else {
             this.precio = precio;
             System.out.println("Precio actualizado. El precio actual es: " + this.precio);
-
         }
     }
 
