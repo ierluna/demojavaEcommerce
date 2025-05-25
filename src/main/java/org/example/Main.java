@@ -7,12 +7,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        ArrayList<Producto> listaProductos = new ArrayList<>();
         Scanner entrada = new Scanner(System.in);
         {
 
             int opcionUsuario;
             do {
                 System.out.println("""
+                        ##########################
                         1) Agregar producto
                         2) Listar productos
                         3) Buscar/Actualizar producto
@@ -22,7 +24,9 @@ public class Main {
                         7) Salir
                         
                         Elija una opción:
+                        ##########################
                         """);
+
                 opcionUsuario = entrada.nextInt();
 
                 switch (opcionUsuario) {
@@ -30,7 +34,7 @@ public class Main {
                         System.out.println("Agregar producto");
                         break;
                     case 2:
-                        System.out.println("Listar producto");
+                        Producto.reportarListaDeProductos(listaProductos);
                         break;
                     case 3:
                         System.out.println("Buscar/Actualizar producto");
@@ -48,7 +52,7 @@ public class Main {
                         System.out.println("¡Gracias por usar la app!");
                         break;
                     default:
-                        System.out.println("Opción incorrecta");
+                        System.out.println("Opción incorrecta. Ingrese una opción del menu");
                 }
             } while (opcionUsuario != 7);
         }
